@@ -5,7 +5,7 @@
 
 N = int(input("Введите трёхзначное число: "))
 a1 = N%10
-a2 = (N//10)%10
+a2 = N//10%10
 a3 = N//100
 result = a1 + a2 +a3
 print(result)
