@@ -6,7 +6,7 @@
 3
 1'''
 
-from random import randint
+'''from random import randint
 
 N = int(input("Введите количество элементов: "))
 
@@ -17,10 +17,18 @@ print(lst)
 
 X = int(input("Введите число: "))
 
-i = 0
 count = 0
-for i in range(len(lst)):
+for i in range(N):
     if lst[i] == X:
         count += 1
-        i += 1
-print(count)
+print(count)'''
+
+
+# Альтернативное решение через метод count
+
+N = int(input("Введите количество элементов: "))
+
+my_list = [int(input("Введите число для списка: ")) for i in range(N)]
+print(my_list)
+X = int(input("Введите число: "))
+print(f'Число {X} встречается в списке {my_list.count(X)} раз(а)')

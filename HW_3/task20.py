@@ -19,11 +19,12 @@
 Будем считать, что на вход подается только одно слово, которое содержит либо только
 английские, либо только русские буквы.'''
 
-word = str(input("Введите слово: "))
+word = input("Введите слово: ")
 
-dict_rus = {'AEIOULNSTR' :1, 'DG' :2, 'BCMP' :3, 'FHVWY' :4, 'K' :5, 'JX' :8, 'QZ' :10,}
+dict = {'AEIOULNSTR' :1, 'DG' :2, 'BCMP' :3, 'FHVWY' :4, 'K' :5, 'JX' :8, 'QZ' :10, 
+            'АВЕИНОРСТ' :1, 'ДКЛМПУ': 2, 'БГЁЬЯ': 3, 'ЙЫ': 4, 'ЗХЦЧ': 5, 'ШЭЮ': 8, 'ФЩЪ': 10}
 def count(word):
-    for key in dict_rus:
+    for key in dict:
         if word in key:
-            dict_rus.get(key)
-print(sum(map(count, input())))
+            return dict.get(key)
+print(sum(map(count, word)))
